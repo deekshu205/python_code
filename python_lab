@@ -1,0 +1,63 @@
+lab program
+1.write  a program to sort dictionary element based on  the key
+d={'cheery':100,'banana':30,'grapes':120,'apple':140}
+result=sort(d.items())
+print(result)
+
+
+
+
+2.write a function named divexp which takes 2 parameter a,b and return a value c(c=a\b),write  a suitable aassertion for a>0 in  function divexp and raise an exception for when b=0, develope a suitable program which reads 2 values from the console and calls a function divexp
+
+def divexp(a, b):
+    try:
+        if a > 0:
+            c = a / b
+            return c
+    except ZeroDivisionError:
+        print("Division by zero not possible")
+
+n1 = float(input("Enter number 1: "))
+n2 = float(input("Enter number 2: "))
+result = divexp(n1, n2)
+print("Result of division =", result)
+
+
+
+
+3. wap to convert frequency of charaters in a given file
+f=open("d://vvce/1.txt","r")
+d={}
+ch=f.read()
+for i in ch:
+       d[i]=d.get(i,0)+1
+print(d)
+
+
+4. wap to read 3 subject arks and displlay pass or fail using class and object
+
+class Marks():
+    def sub(self):
+        n = int(input("Enter the number of subjects: "))
+        for i in range(1, n+1):
+            s = int(input("Enter the marks: "))
+            if s < 40:
+                print("Fail")
+            else:
+                print("Pass")
+
+m = Marks()
+m.sub()
+
+
+5.wap to caluculate area of circle using classes and function
+
+import math
+class area():
+      def circle(self,r):
+           a=math.pi*r*r
+           return a
+a=area()
+r=float(input("enter the radius")
+result=a.circle(r)
+print("result=%.2f"%result)
